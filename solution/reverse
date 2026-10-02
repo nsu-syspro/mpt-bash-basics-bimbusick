@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+#есть однострочное решение, но полагаю использовать его нельзя
+#tac "$@"
+
+words=()
+IFS=$'\n' read -d '' -ra words
+amount=$((${#words[*]} - 1))
+
+for i in $(seq $amount -1 0)
+do
+	echo "${words[i]}"
+done
