@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+for i in "${@:2}"
+do
+	mv "$i" "$i$1"
+done
